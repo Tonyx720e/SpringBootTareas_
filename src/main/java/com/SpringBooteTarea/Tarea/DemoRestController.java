@@ -9,9 +9,12 @@ public class DemoRestController {
 
     @GetMapping("/")
     public String getTarea(){
-        return "Esta es la terea de Spring Boot";
+        return "Esta es la terea de Spring Boot "+ "de "+ this.nombre + this.apellido+ "!";
 
     }
 @Value("${nombre}")
     private String nombre;
+
+    @Value("${apellido}")
+    private String apellido;
 }
